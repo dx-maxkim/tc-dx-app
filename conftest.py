@@ -1,5 +1,15 @@
 import pytest
+import os
 from pytest_html import extras
+
+@pytest.fixture(scope="session")
+def app_base_path():
+    """애플리케이션의 기본 경로를 반환하는 Fixture"""
+    # 환경 변수에서 경로를 가져오거나, 직접 지정할 수 있습니다.
+    path = "/home/max/Works/dx-runtime/dx_app"
+    if not os.path.isdir(path):
+        pytest.fail(f"지정한 애플리케이션 경로를 찾을 수 없습니다: {path}")
+    return path
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):

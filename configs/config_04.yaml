@@ -1,0 +1,6 @@
+# 테스트할 분류(classification) 작업에 대한 설정
+classification_test:
+  # 실행할 명령어
+  command: "bin/classification -m assets/models/EfficientNetB0_4.dxnn -i sample/ILSVRC2012/1.jpeg"
+  # 검증할 기대 출력값
+  expected_output: "Top1 Result : class 321"

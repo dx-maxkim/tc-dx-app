@@ -5,7 +5,7 @@ import pytest
 # --- 설정 로드 함수 ---
 def load_config():
     """config.yaml 파일을 읽어와 설정을 반환합니다."""
-    config_path = pathlib.Path('configs/config_02.yaml')
+    config_path = pathlib.Path('configs/config_03.yaml')
     if not config_path.is_file():
         pytest.fail(f"설정 파일 '{config_path}'를 찾을 수 없습니다.")
     
@@ -22,7 +22,7 @@ EXPECTED_FILES = set(CONFIG['expected_files']) # 리스트를 집합(set)으로 
 
 def test_directory_contains_exact_files_from_config(app_base_path):
     """
-    'config_02.yaml'에 명시된 폴더에 정확히 지정된 model 파일들만 있는지 확인
+    'config_03.yaml'에 명시된 폴더에 정확히 지정된 video 파일들만 있는지 확인
     """
     # 1. 테스트할 폴더가 존재하는지 확인합니다.
     BASE_PATH = pathlib.Path(app_base_path)

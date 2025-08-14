@@ -1,0 +1,22 @@
+application_setup:
+  # demo video path
+  directory: "assets/videos"
+
+  # 폴더에 반드시 있어야 할 실행 파일 목록
+  expected_files:
+    - blackbox-city-road2.mov
+    - blackbox-city-road.mp4
+    - boat.mp4
+    - carrierbag.mp4
+    - cctv-city-road2.mov
+    - cctv-city-road.mov
+    - codec_test_clip_h264_16Mbps.mp4
+    - codec_test_clip_h265_8Mbps.mp4
+    - dance-group2.mov
+    - dance-group.mov
+    - dance-solo.mov
+    - dogs.mp4
+    - doughnut.mp4
+    - dron-citry-road2.mov
+    - dron-citry-road.mov
+    - snowboard.mp4

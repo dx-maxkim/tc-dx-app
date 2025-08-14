@@ -1,0 +1,10 @@
+# 테스트할 분류(object detection) 작업에 대한 설정
+object_detection_test:
+  # Test List
+  - name: "YOLOv7_512"
+    command: "bin/yolo -m assets/models/YOLOv7_512.dxnn -i sample/1.jpg -p 5"
+    expected_result: "result.jpg"
+
+  - name: "YoloV7_640"
+    command: "bin/yolo -m assets/models/YoloV7.dxnn -i sample/1.jpg -p 4"
+    expected_result: "result.jpg"

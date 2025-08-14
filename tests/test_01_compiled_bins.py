@@ -20,16 +20,19 @@ APP_DIR = pathlib.Path(CONFIG['directory'])
 EXPECTED_FILES = set(CONFIG['expected_files']) # 리스트를 집합(set)으로 변환
 
 
-def test_directory_contains_exact_files_from_config():
+def test_directory_contains_exact_files_from_config(app_base_path):
     """
-    'config_01.yaml'에 명시된 폴더에 정확히 지정된 파일들만 있는지 확인합니다.
+    'config_01.yaml'에 명시된 폴더에 정확히 지정된 demo excutable 파일들만 있는지 확인
     """
     # 1. 테스트할 폴더가 존재하는지 확인합니다.
-    if not APP_DIR.is_dir():
-        pytest.fail(f"테스트 대상 폴더 '{APP_DIR}'가 존재하지 않습니다.")
+    BASE_PATH = pathlib.Path(app_base_path)
+    APP_PATH = BASE_PATH / APP_DIR
+
+    if not APP_PATH.is_dir():
+        pytest.fail(f"테스트 대상 폴더 '{APP_PATH}'가 존재하지 않습니다.")
 
     # 2. 폴더 안의 실제 파일 목록을 집합(set)으로 가져옵니다.
-    actual_files = {f.name for f in APP_DIR.glob('*') if f.is_file()}
+    actual_files = {f.name for f in APP_PATH.glob('*') if f.is_file()}
 
     # 3. YAML에서 로드한 기대 파일 목록과 실제 파일 목록이 정확히 일치하는지 검증합니다.
     assert actual_files == EXPECTED_FILES, (
