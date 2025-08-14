@@ -1,0 +1,18 @@
+application_setup:
+  # 애플리케이션이 위치한 폴더 경로
+  directory: "/home/max/Works/dx-runtime/dx_app/bin"
+
+  # 폴더에 반드시 있어야 할 실행 파일 목록
+  expected_files:
+    - classification
+    - ddrnet
+    - imagenet_classification
+    - od_ddr
+    - od_pid
+    - pidnet
+    - pose
+    - pose_ddrnet
+    - run_classifier
+    - run_detector
+    - yolo
+    - yolo_multi

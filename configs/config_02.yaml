@@ -1,0 +1,27 @@
+application_setup:
+  # 애플리케이션이 위치한 폴더 경로
+  directory: "/home/max/Works/dx-runtime/dx_app/assets/models"
+
+  # 폴더에 반드시 있어야 할 실행 파일 목록
+  expected_files:
+    - DeepLabV3PlusMobileNetV2_2.dxnn
+    - EfficientNetB0_4.dxnn
+    - EfficientNetB0_8.dxnn
+    - MobileNetV2_2.dxnn
+    - osnet_x0_5_market_256x128.dxnn
+    - SCRFD500M_1.dxnn
+    - YOLOV3_1.dxnn
+    - YOLOV4_3.dxnn
+    - YOLOV5_2.dxnn
+    - YOLOV5Pose640_1.dxnn
+    - YOLOV5S_1.dxnn
+    - YOLOV5S_3.dxnn
+    - YOLOV5S_4.dxnn
+    - YOLOV5S_6.dxnn
+    - YOLOV5S_Face-1.dxnn
+    - YOLOV5X_2.dxnn
+    - YOLOv7_512.dxnn
+    - YoloV7.dxnn
+    - YoloV8N.dxnn
+    - YOLOV9S.dxnn
+    - YOLOX-S_1.dxnn

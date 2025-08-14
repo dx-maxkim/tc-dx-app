@@ -1,0 +1,6 @@
+pytest>=8.0
+pytest-xdist>=3.6
+pytest-timeout>=2.3
+pytest-html>=4.1
+PyYAML>=6.0
+rich>=13.9
